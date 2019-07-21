@@ -12,4 +12,4 @@ cd slide-out-navigation && npm i && npm start
 ```
 
 ### Capture
-![demo](https://github.com/watanabeJunna/slide-out-navigation/wiki/images/demo.gif)
+![demo](https://github.com/watanabeJunna/slide-out-navigation/wiki/images/demo.copy.gif)
