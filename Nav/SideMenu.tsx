@@ -1,8 +1,6 @@
 import React, { FC } from "react"
 import styled, { css, StyledComponentBase } from "styled-components"
 
-const WRAPPER_WIDTH: number = 320
-
 export const SideMenu: FC<SideMenuProps> = props => (
     <SideMenuWrapper active={props.active}>
         {
@@ -14,6 +12,8 @@ export const SideMenu: FC<SideMenuProps> = props => (
         }
     </SideMenuWrapper>
 )
+
+const WRAPPER_WIDTH: number = 320
 
 const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<SideMenuProps>`
     width: ${WRAPPER_WIDTH}px;

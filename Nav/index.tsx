@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { SideMenu } from "./SideMenu"
 
-export const Nav: FC<NavProps> = (props: NavProps) => {
+export const Nav: FC<NavProps> = props => {
     const [active, setActive] = useState(false)
 
     return <>
@@ -12,7 +12,7 @@ export const Nav: FC<NavProps> = (props: NavProps) => {
             <NavLinkMenu
                 items={props.navMenuItems}
             />
-            <NavIconMenu onClick={e => setActive(!active)} >
+            <NavIconMenu onClick={() => setActive(!active)} >
                 <Bars icon={faBars} />
             </NavIconMenu>
         </NavWrapper>
@@ -23,7 +23,7 @@ export const Nav: FC<NavProps> = (props: NavProps) => {
     </>
 }
 
-const NavLinkMenu: FC<NavLinkMenuProps> = (props: NavLinkMenuProps) => (
+const NavLinkMenu: FC<NavLinkMenuProps> = props => (
     <NavLinkMenuWrapper>
         {
             props.items.map((item: NavItem, c: React.ReactText) => (
