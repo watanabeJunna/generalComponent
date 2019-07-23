@@ -1,7 +1,13 @@
 import React, { FC, ReactText } from "react"
 import styled, { css, StyledComponentBase } from "styled-components"
+import { Item } from "./base"
 
-export const SideMenu: FC<SideMenuProps> = props => (
+type Props = {
+    active: boolean
+    items: string[]
+}
+
+export const SideMenu: FC<Props> = props => (
     <SideMenuWrapper active={props.active}>
         {
             props.items.map((item: string, c: ReactText) => (
@@ -15,14 +21,13 @@ export const SideMenu: FC<SideMenuProps> = props => (
 
 const WRAPPER_WIDTH: number = 320
 
-const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<SideMenuProps>`
+const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<Props>`
     width: ${WRAPPER_WIDTH}px;
     height: 100%;
     position: fixed;
     right: 0;
     z-index: 1;
     background-color: #fff;
-    border: 1px solid #c6d0da;
     ${props => props.active ? css`
     transform: translateX(0px);` : css`
     transform: translateX(${WRAPPER_WIDTH}px);`}
@@ -30,16 +35,9 @@ const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<SideMenuProps>
 `
 
 const MenuItem: StyledComponentBase<any, any> = styled.div`
+    ${Item}
     padding: 22px 0 20px 42px;
-    color: #5f6f81;
-    border-bottom: 1px solid #c6d0da;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 18px;
-    overflow: hidden;
-    transition: .3s;
-    &:hover {
-        color: white;
-    background-color: #5f6f81;
-}
 `
