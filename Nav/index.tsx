@@ -1,4 +1,4 @@
-import React, { useState, FC, ReactText } from "react"
+import React, { useState, FC } from "react"
 import styled, { StyledComponentBase } from "styled-components"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { NavLinkMenu } from "./NavLinkMenu"
