@@ -1,5 +1,6 @@
 import React, { FC, ReactText } from "react"
 import styled, { css, StyledComponentBase } from "styled-components"
+import { Item } from "./base"
 
 interface Props {
     active: boolean
@@ -34,15 +35,9 @@ const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<Props>`
 `
 
 const MenuItem: StyledComponentBase<any, any> = styled.div`
+    ${Item}
     padding: 22px 0 20px 42px;
-    color: #5f6f81;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 18px;
-    transition: .3s;
-    opacity: 0.7;
-    &:hover {
-        opacity: 1;
-        color: #228aff;
-    }
 `

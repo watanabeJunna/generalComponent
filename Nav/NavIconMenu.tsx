@@ -1,4 +1,4 @@
-import styled, { StyledComponentBase } from "styled-components";
+import styled, { StyledComponentBase } from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 export const NavIconMenu: StyledComponentBase<any, any> = styled.div`
