@@ -1,12 +1,12 @@
-import React, { FC } from "react"
+import React, { FC, ReactText } from "react"
 import styled, { css, StyledComponentBase } from "styled-components"
 
 export const SideMenu: FC<SideMenuProps> = props => (
     <SideMenuWrapper active={props.active}>
         {
-            props.items.map((e, c) => (
+            props.items.map((item: string, c: ReactText) => (
                 <MenuItem key={c}>
-                    {e}
+                    {item}
                 </MenuItem>
             ))
         }

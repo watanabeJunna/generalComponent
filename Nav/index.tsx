@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react"
+import React, { useState, FC, ReactText } from "react"
 import styled, { StyledComponentBase } from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
@@ -26,10 +26,10 @@ export const Nav: FC<NavProps> = props => {
 const NavLinkMenu: FC<NavLinkMenuProps> = props => (
     <NavLinkMenuWrapper>
         {
-            props.items.map((item: NavItem, c: React.ReactText) => (
+            props.items.map((item: NavItem, c: ReactText) => (
                 <NavItem
                     key={c}
-                    onClick={e => location.href = item.link}
+                    onClick={() => location.href = item.link}
                 >
                     {item.name}
                 </NavItem>
