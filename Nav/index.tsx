@@ -5,7 +5,7 @@ import { NavLinkMenu } from "./NavLinkMenu"
 import { NavIconMenu, Bars } from "./NavIconMenu"
 import { SideMenu } from "./SideMenu"
 
-interface Props {
+type Props = {
     navMenuItems: NavItem[]
     sideMenuItems: string[]
 }

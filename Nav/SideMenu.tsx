@@ -2,7 +2,7 @@ import React, { FC, ReactText } from "react"
 import styled, { css, StyledComponentBase } from "styled-components"
 import { Item } from "./base"
 
-interface Props {
+type Props = {
     active: boolean
     items: string[]
 }
