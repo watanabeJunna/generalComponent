@@ -22,7 +22,6 @@ const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<SideMenuProps>
     right: 0;
     z-index: 1;
     background-color: #fff;
-    border: 1px solid #c6d0da;
     ${props => props.active ? css`
     transform: translateX(0px);` : css`
     transform: translateX(${WRAPPER_WIDTH}px);`}
@@ -32,14 +31,13 @@ const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<SideMenuProps>
 const MenuItem: StyledComponentBase<any, any> = styled.div`
     padding: 22px 0 20px 42px;
     color: #5f6f81;
-    border-bottom: 1px solid #c6d0da;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
     font-size: 18px;
-    overflow: hidden;
     transition: .3s;
+    opacity: 0.7;
     &:hover {
-        color: white;
-    background-color: #5f6f81;
-}
+        opacity: 1;
+        color: #228aff;
+    }
 `

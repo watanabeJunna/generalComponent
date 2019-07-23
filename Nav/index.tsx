@@ -41,7 +41,6 @@ const NavLinkMenu: FC<NavLinkMenuProps> = props => (
 const NavWrapper: StyledComponentBase<any, any> = styled.nav`
     z-index: 0;
     background-color: white;
-    border-bottom: 1px solid #c6d0da;
     padding: 0;
     margin: 0;
 `
@@ -62,16 +61,16 @@ const NavItem: StyledComponentBase<any, any> = styled.div`
     font-size: 24px;
     font-weight: 300;
     color: #5f6f81;
-    border-right: 1px solid #c6d0da;
+    opacity: 0.7;
+    transition: .5s;
     &:hover {
-        color: white;
-        background-color: #5f6f81;
+        opacity: 1;
+        color: #2296ad;
     }
 `
 
 const Bars: StyledComponentBase<any, any> = styled(FontAwesomeIcon)`
-    color: #09aaff;
+    color: #228aff;
     font-size: 28px;
     padding: 17px 20px;
-    border: 1px solid #c6d0da;
 `
