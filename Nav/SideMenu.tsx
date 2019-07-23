@@ -1,7 +1,12 @@
 import React, { FC, ReactText } from "react"
 import styled, { css, StyledComponentBase } from "styled-components"
 
-export const SideMenu: FC<SideMenuProps> = props => (
+interface Props {
+    active: boolean
+    items: string[]
+}
+
+export const SideMenu: FC<Props> = props => (
     <SideMenuWrapper active={props.active}>
         {
             props.items.map((item: string, c: ReactText) => (
@@ -15,7 +20,7 @@ export const SideMenu: FC<SideMenuProps> = props => (
 
 const WRAPPER_WIDTH: number = 320
 
-const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<SideMenuProps>`
+const SideMenuWrapper: StyledComponentBase<any, any> = styled.div<Props>`
     width: ${WRAPPER_WIDTH}px;
     height: 100%;
     position: fixed;
